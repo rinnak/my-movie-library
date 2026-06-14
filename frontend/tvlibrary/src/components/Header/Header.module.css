@@ -1,0 +1,100 @@
+.header{
+    height: 68px;
+    background-color: rgba(15, 15, 18, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1c1c21;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 500;
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+}
+
+.searchForm{
+    flex: 0 1 480px;
+    width: 100%;
+}
+
+.searchWrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput{
+    width: 100%;
+    height: 38px;
+    background-color: #151518;
+    border: 1px solid #222226;
+    border-radius: var(--radius-lg);
+    padding: 0 36px 0 38px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+    border-color: #3e3e4a;
+    background-color: #1a1a20;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.03);
+}
+
+.clearBtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: none;
+    border: none;
+    color: #8a8a93;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.watchedItem{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    flex-shrink: 0;
+    color: var(--color-text-dimmed);
+    margin-right: 12px;
+}
+
+.avatarBtn{
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.avatar{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e74c3c, #9b59b6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid #222226;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+}
+
+.avatarBtn:hover .avatar{
+    transform: scale(1.04);
+    border-color: #e74c3c;
+}
+
+@media (max-width: 740px){
+    .header{
+        padding: 0 10px;
+    }
+}

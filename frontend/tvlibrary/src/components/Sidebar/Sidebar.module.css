@@ -1,0 +1,220 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: var(--color-bg-sidebar);
+    border-right: 1px solid var(--color-bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    position: fixed;
+    color: var(--color-text-dimmed);
+    font-weight: 300;
+    left: 0;
+    top: 0;
+    z-index: 800;
+}
+
+.logoBlock{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.logoTitle{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-main);
+    > span {
+        color: var(--color-primary);
+    }
+}
+
+.logoSub{
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.sectionType{
+    font-weight: 400;
+}
+
+li{
+    list-style: none;
+}
+
+.menuList{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+.menuItem, .filterButton{
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+    color: var(--color-text-dimmed);
+    font-size: 14px;
+    width: 100%;
+}
+
+.menuItem:hover, .filterButton:hover{
+    background: linear-gradient(
+            90deg,
+            rgba(229, 9, 20, 0.35),
+            rgba(229, 9, 20, 0.1)
+    );
+    color: var(--color-primary);
+
+    .menuIcon {
+        color: var(--color-primary);
+    }
+}
+.menuIcon{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    flex-shrink: 0;
+    color: var(--color-text-dimmed);
+}
+
+.menuItemActive, .filterButtonActive {
+    background: linear-gradient(
+            90deg,
+            rgba(229, 9, 20, 0.22),
+            rgba(229, 9, 20, 0.08)
+    );
+
+    color: var(--color-primary);
+    .menuIcon {
+        color: var(--color-primary);
+    }
+}
+
+.filterButtonGroup{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.filterButton{
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+
+
+}
+
+.sectionTitle{
+    margin-bottom: 8px;
+}
+
+.selectInput{
+    background-color: var(--color-bg-card);
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 32px 12px 16px;
+    color: var(--color-text-dimmed);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+
+}
+
+.selectInput:hover{
+    background-image:
+            linear-gradient(90deg, rgba(229, 9, 20, 0.22), rgba(229, 9, 20, 0.08));
+    border: 1px solid rgba(229, 9, 20, 0.22);
+    color: var(--color-primary);
+}
+
+.selectInput:focus{
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.15);
+    border: 1px solid rgba(229, 9, 20, 0.22);
+    color: var(--color-primary);
+}
+
+.selectInput option {
+    background-color: var(--color-bg-sidebar);
+    color: var(--color-text-main);
+    padding: 12px;
+    font-size: 14px;
+}
+
+.burgerToggle{
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #1c1c21;
+    border: 1px solid #222226;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.burgerLine{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 940px){
+    .burgerToggle{
+        display: flex;
+    }
+    .sidebar{
+        transform: translateX(-100%);
+    }
+    .sidebarOpen{
+        transform: translateX(0);
+    }
+    .burgerToggleActive {
+        border-color: rgba(229, 9, 20, 0.5);
+
+        .burgerLine:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+            background-color: var(--color-primary);
+        }
+
+        .burgerLine:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burgerLine:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+            background-color: var(--color-primary);
+        }
+    }
+
+    .logoBlock{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,310 @@
+.banner{
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center 15%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            90deg,
+            rgba(10, 17, 21, 0.95) 0%,
+            rgba(10, 17, 21, 0.8) 35%,
+            rgba(10, 17, 21, 0.4) 60%,
+            transparent 100%
+    );
+    z-index: 1;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 50%;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    -webkit-mask-image: linear-gradient(90deg, black 60%, transparent 100%);
+    mask-image: linear-gradient(90deg, black 60%, transparent 100%);
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.badge{
+    color: var(--color-primary);
+    font-weight: 700;
+    max-width: 600px;
+    font-size: 18px;
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+}
+
+.title{
+    font-size: 44px;
+    font-weight: 800;
+    max-width: 800px;
+    color: var(--color-text-main);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.meta{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--color-text-dimmed);
+    margin-bottom: 20px;
+}
+
+.rating{
+    font-weight: 700;
+    color: #ffb800;
+}
+
+.ratingGroup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.description{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 600px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    font-weight: 300;
+    color: var(--color-text-dimmed);
+    overflow: hidden;
+}
+
+.btnPrimary{
+    background-color: var(--color-primary);
+    color: var(--color-text-main);
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-fast);
+}
+.btnPrimary:hover{
+    background-color: rgba(229, 9, 20, 0.85);
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    column-gap: 14px;
+}
+
+.btnSecondary{
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+    padding: 14px 24px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-fast);
+}
+
+.btnSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.bannerSkeleton, .bannerError{
+    width: 100%;
+    height: 420px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    border: 1px solid var(--color-border);
+}
+
+.menuIcon{
+    color: #ffb800;
+}
+.menuIcon, .btnIcon{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    transition: var(--transition-fast);
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dotActive{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 36px;
+    border-radius: 4px;
+
+}
+
+.bannerSkeleton{
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center 15%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid #222226;
+    background-color: #1c1c21;
+}
+
+.bannerSkeleton:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+            90deg,
+            rgba(28, 28, 33, 0) 0%,
+            rgba(43, 43, 51, 0.6) 50%,
+            rgba(28, 28, 33, 0) 100%
+    );
+    transform: translateX(-100%);
+    animation: shimmer 1.6s infinite ease-in-out;
+}
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 1000px){
+    .banner{
+        height: 380px;
+        margin-bottom: 20px;
+    }
+    .overlay {
+        background: linear-gradient(
+                90deg,
+                rgba(10, 17, 21, 0.98) 0%,
+                rgba(10, 17, 21, 0.85) 60%,
+                rgba(10, 17, 21, 0.5) 100%
+        );
+    }
+    .overlay::before {
+        width: 100%;
+        -webkit-mask-image: linear-gradient(90deg, black 70%, transparent 100%);
+        mask-image: linear-gradient(90deg, black 70%, transparent 100%);
+    }
+    .content{
+        padding: 30px;
+    }
+    .title{
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    .description{
+        font-size: 14px;
+        max-width: 480px;
+        margin-bottom: 24px;
+        -webkit-line-clamp: 3;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 500px){
+    .banner{
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .content{
+        padding: 30px;
+    }
+    .title{
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .description{
+        font-size: 14px;
+        max-width: 480px;
+        margin-bottom: 24px;
+        -webkit-line-clamp: 2;
+        margin-bottom: 18px;
+    }
+    .btnPrimary, .btnSecondary{
+        padding: 8px 26px;
+        font-size: 12px;
+    }
+    .meta{
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+    .content{
+        padding: 20px 20px 30px 20px;
+    }
+    .badge{
+        font-size: 14px;
+        margin-bottom: 6px  ;
+    }
+
+    .pagination{
+        bottom: 16px;
+    }
+
+    .gridSection{
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,39 @@
+:root{
+    --color-bg-main: #0a1115;
+    --color-bg-sidebar: #171a21;
+
+    --color-bg-card: #1d212b;
+    --color-bg-hover: #252c38;
+
+    --color-primary: #e50914;
+    --color-primary-hover: #c40812;
+
+    --color-accent-gold: #f5c451;
+
+    --color-text-main: #fff;
+    --color-text-dimmed: #b8bcc8;
+    --color-text-muted: #8d93a1;
+
+    --color-border: #2a2f3a;
+
+    --color-shadow: rgba(0, 0, 0, 0.35);
+
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+
+    --transition-fast: 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--color-bg-main);
+    background-image: radial-gradient(circle at top right, #1a1012 0%, var(--color-bg-main) 45%);
+    background-attachment: fixed; /*закрепляется относительно окна браузера*/
+}
