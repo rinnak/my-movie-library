@@ -2,10 +2,10 @@
 
 Веб-приложение для поиска фильмов, управления избранным и просмотренным контентом.
 
-## 🛠 Технологический стек
+## Технологический стек
 
 - **Frontend:** React, TypeScript, CSS Modules, Vite
-- **Backend:** .NET Core (C#), Web API
+- **Backend:** ASP.NET Core (C#), Web API
 
 ---
 
