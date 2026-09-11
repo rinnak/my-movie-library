@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\novik\\RiderProjects\\TVSeriesLibrary\\TVSeriesLibrary\\TVSeriesLibrary.csproj": {}
+    "/Users/rinnnaak/my-movie-library/backend/TVSeriesLibrary/TVSeriesLibrary/TVSeriesLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\novik\\RiderProjects\\TVSeriesLibrary\\TVSeriesLibrary\\TVSeriesLibrary.csproj": {
+    "/Users/rinnnaak/my-movie-library/backend/TVSeriesLibrary/TVSeriesLibrary/TVSeriesLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\novik\\RiderProjects\\TVSeriesLibrary\\TVSeriesLibrary\\TVSeriesLibrary.csproj",
+        "projectUniqueName": "/Users/rinnnaak/my-movie-library/backend/TVSeriesLibrary/TVSeriesLibrary/TVSeriesLibrary.csproj",
         "projectName": "TVSeriesLibrary",
-        "projectPath": "C:\\Users\\novik\\RiderProjects\\TVSeriesLibrary\\TVSeriesLibrary\\TVSeriesLibrary.csproj",
-        "packagesPath": "C:\\Users\\novik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\novik\\RiderProjects\\TVSeriesLibrary\\TVSeriesLibrary\\obj\\",
+        "projectPath": "/Users/rinnnaak/my-movie-library/backend/TVSeriesLibrary/TVSeriesLibrary/TVSeriesLibrary.csproj",
+        "packagesPath": "/Users/rinnnaak/.nuget/packages/",
+        "outputPath": "/Users/rinnnaak/my-movie-library/backend/TVSeriesLibrary/TVSeriesLibrary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\novik\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/rinnnaak/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -38,10 +39,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "BCrypt.Net-Next": {
@@ -104,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
